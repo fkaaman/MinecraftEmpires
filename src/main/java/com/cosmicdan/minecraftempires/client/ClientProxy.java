@@ -8,6 +8,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.cosmicdan.minecraftempires.CommonProxy;
 import com.cosmicdan.minecraftempires.client.gui.GuiCompass;
 import com.cosmicdan.minecraftempires.client.gui.GuiLog;
+import com.cosmicdan.minecraftempires.client.gui.GuiTextOverlay;
 import com.cosmicdan.minecraftempires.client.renderers.ModRenderers;
 import com.cosmicdan.minecraftempires.entities.tiles.ModTileEntityRenderers;
 import com.cosmicdan.minecraftempires.eventhandlers.WorldEvents;
@@ -37,6 +38,9 @@ public class ClientProxy extends CommonProxy {
     public void postInit(FMLPostInitializationEvent event) {
         super.postInit(event);
         MinecraftForge.EVENT_BUS.register(new GuiCompass(Minecraft.getMinecraft()));
+        
+        // just threw it in there...
+        MinecraftForge.EVENT_BUS.register(new GuiTextOverlay(Minecraft.getMinecraft()));
     }
     
     @Override

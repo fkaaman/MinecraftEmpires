@@ -6,3 +6,9 @@
 bin/
 eclipse/
 gradle/
+screenshots/
+saves/
+options.txt
+config/
+logs/
+*.log
